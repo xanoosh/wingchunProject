@@ -24,8 +24,20 @@
 
         <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-">
             <h3 class="title">The Grandmaster's Janusz Bielczyński <br> Wing Chun School</h3></div>
-                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col- menuContainer"><h4>Menu</h4>
-                    <div id="yin-yang"></div>
+                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col- menuContainer">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                            Menu
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#About">About Us</a>
+                            <a class="dropdown-item" href="#">Interview</a>
+                            <a class="dropdown-item" href="#Form">Join us</a>
+                            <div class="yin" id="yin-yang"></div>
+                        </div>
+                    </div>
+                    <!--<a href="#Form"><h4>Sign in</h4></a>-->
+                    <!--<div id="yin-yang"></div>-->
             </div>
             </div>
         </section>
@@ -65,7 +77,8 @@
 
         <div class="row">
 
-            <div class="col-xl-7 col-lg-7 col-md-7 col- info">
+            <div class="col-xl-7 col-lg-7 col-md-7 col- info" id="About">
+                <h4>About</h4>
                 <p class="empty-holder">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis orci elit, suscipit vel sapien at, lacinia suscipit augue. Sed pharetra aliquam arcu, eget placerat sapien venenatis eget. Aliquam eget dolor lorem. Morbi cursus convallis ornare. Aliquam condimentum malesuada massa. Proin molestie risus nec arcu facilisis, eget fringilla diam vulputate.</p>
             </div>
         </div>
@@ -93,14 +106,50 @@
 
     </section>
 
-    <div class="row">
 
-    <section class="form container">
-            <form>
 
-            </form>
-        </section>
-    </div>
+
+        <!--form-->
+
+
+        <div class="container">
+            <div class="row">
+
+
+            <div class="col-xl-7 col-lg-7 col-md-7 col- contact-form" id="Form">
+
+                <div class="form-group">
+                    <label>Name
+                    <input type="text" class="form-control">
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label>Email
+                    <input type="email" class="form-control">
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label>Message
+                    <textarea  class="form-control" rows="7"></textarea>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary">Sign in</button>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+
+
+
+        <!--form-->
+
+
     <section class="container">
     <div class="row">
 
@@ -132,6 +181,7 @@
 </div>
 
 <script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="parallax.js-1.5.0/parallax.min.js"></script>
 <script src="js/app.js"></script>

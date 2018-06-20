@@ -66,10 +66,21 @@ html,body{
     font-family: $headingsFont;
     .menuContainer{
       display: flex;
-      justify-content: space-evenly;
-      h4{
-        margin: 0.7rem;
+      justify-content: center;
+      align-items: center;
+      button {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        color: black;
+        font-weight: bold;
+        min-width: 12.2vw;
       }
+      .dropdown-menu{
+        .yin{
+          margin: 1vh auto;
+        }
+      }
+
     }
 
 
@@ -89,8 +100,7 @@ html,body{
     border-width: 1px 1px 25px 1px;
     border-radius: 100%;
     position: relative;
-
-    &:hover{
+    
       @extend %yinRotate;
       @-webkit-keyframes rotation {
         from {
@@ -100,7 +110,7 @@ html,body{
           -webkit-transform: rotate(359deg);
         }
       }
-    }
+
   }
 
 
@@ -143,17 +153,41 @@ html,body{
 
   //yin yang
 
-
-
 }
 
+  %contentStyle {
+    background-color: $contentBackground;
+    color: $fontColor;
+    border-radius: 0.5rem;
+    margin: 15vh auto;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
 .info{
-  background-color: rgba(0,0,0, 0.6);
-  color: white;
-  border-radius: 0.5rem;
-  margin: 15vh auto;
-  padding: 1.5rem;
-  font-size: 1rem;
+  @extend %contentStyle;
+}
+
+.contact-form{
+ @extend %contentStyle;
+  font-family: $headingsFont;
+  input{
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  textarea{
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  button{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    font-weight: bold;
+    padding: 0.5rem;
+    &:hover{
+      color: black;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
 }
 
 
