@@ -3,7 +3,7 @@ $(function () {
 
 
 
-var anchor = $('ul,li,a');
+var anchor = $('a[href^="#"]');
 
 anchor.click(function (e) {
     e.preventDefault();
@@ -17,7 +17,6 @@ anchor.click(function (e) {
 
     var px = section.offset().top;
 
-    //$('html,body').scrollTop(px,0);
 
     $('html,body').animate({'scrollTop':px},1500);
 
