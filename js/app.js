@@ -1,15 +1,10 @@
+$(function() {
+  var anchor = $('a[href^="#"]');
 
-$(function () {
-
-
-
-var anchor = $('a[href^="#"]');
-
-anchor.click(function (e) {
+  anchor.click(function(e) {
     e.preventDefault();
 
-
-    var href = $(this).attr('href');
+    var href = $(this).attr("href");
 
     var section = $(href);
 
@@ -17,10 +12,22 @@ anchor.click(function (e) {
 
     var px = section.offset().top;
 
-
-    $('html,body').animate({'scrollTop':px},1500);
-
+    $("html,body").animate({ scrollTop: px }, 1500);
+  });
 });
 
-});
+//show/hide menu start
 
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+  var currentScrollpos = window.pageYOffset;
+
+  if (prevScrollpos > currentScrollpos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-300px";
+  }
+
+  prevScrollpos = currentScrollpos;
+};
