@@ -36,7 +36,9 @@ hero .main-menu {
 }
 
 /* line 51, scss/main.scss */
-
+.btn-outline-white:hover {
+  color: #000;
+}
 /* line 78, scss/main.scss */
 hero .yin-yang,
 hero .yin-yang:before,
@@ -49,15 +51,17 @@ hero .yin-yang:after {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+.form-control {
+  width: 120px !important;
+}
 
 .nav-link:hover {
   color: white !important;
 }
 .nav-link {
   position: relative;
-  padding-left: 30px !important;
-  padding-bottom: 20px !important;
-  padding-top: 20px !important;
+  padding: 20px 35px !important;
+  display: inline;
 }
 
 .nav-link:hover .yin-yang {
@@ -90,7 +94,7 @@ hero .yin-yang {
   border-radius: 100%;
   position: absolute;
   left: 0;
-  top: 8px;
+  top: 20px;
 }
 
 /*@-webkit-keyframes rotation {
