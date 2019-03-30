@@ -23,6 +23,13 @@ body {
   z-index: 1;
 }
 
+@media(max-width: 768px){
+  .bgcontainer{
+    background-position: left center !important; 
+    background-size: 200% 10% !important;
+  }
+}
+
 /* Menu styles */
  .main-menu {
   padding: 10px;

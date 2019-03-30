@@ -35,5 +35,9 @@ window.onscroll = function() {
   prevScrollpos = currentScrollpos;
 };
 
-//hide menu when link is clicked.. working on it
+//hide hamurger menu when link is clicked
 
+$(".nav-link").click(function(){
+  $(".navbar-toggler").addClass("collapsed")
+  $(".navbar-collapse").removeClass("show");
+});
