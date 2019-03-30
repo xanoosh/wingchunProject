@@ -66,14 +66,9 @@ body {
 }
 }
 
-.title{
-  padding-top: 100px; 
-  color: white;
-  font-family: "Eagle Lake", cursive;
-}
 
 @media(max-width: 768px){
-  .title{
+  h1{
     font-size: 2rem;
   }
 }
