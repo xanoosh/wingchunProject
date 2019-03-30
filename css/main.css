@@ -23,46 +23,55 @@ body {
   z-index: 1;
 }
 
-/* line 45, scss/main.scss */
-hero .main-menu {
+/* Menu styles */
+ .main-menu {
   padding: 10px;
   border-radius: 0 0 1rem 1rem;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   font-family: "Eagle Lake", cursive;
 }
-#navbar {
-  transition: all 1.5s ease 0s;
+.main-menu li{
+  padding: 15px 20px;
 }
 
-/* line 51, scss/main.scss */
-.btn-outline-white:hover {
-  color: #000;
+.nav-link {
+  position: relative;
+  display: inline;
 }
-/* line 78, scss/main.scss */
-hero .yin-yang,
-hero .yin-yang:before,
-hero .yin-yang:after {
-  -ms-transform: rotate(0deg); /* IE 9 */
-  -webkit-transform: rotate(0deg); /* Safari and Chrome */
-  -o-transform: rotate(0deg); /* Opera */
-  -moz-transform: rotate(0deg); /* Firefox */
-  transform: rotate(0deg);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.form-control {
-  width: 120px !important;
-}
-
 .nav-link:hover {
   color: white !important;
 }
-.nav-link {
-  position: relative;
-  padding: 20px 35px !important;
-  display: inline;
+
+#navbar {
+  transition: all .5s ease 0s;
 }
+
+@media(max-width: 991px){
+.main-menu li{
+  padding: 25px 50px;
+}
+.main-menu li a{
+  display: block;
+}
+.main-menu li a .yin-yang{
+  left: -35px;
+}
+}
+
+.title{
+  padding-top: 100px; 
+  color: white;
+  font-family: "Eagle Lake", cursive;
+}
+
+@media(max-width: 768px){
+  .title{
+    font-size: 2rem;
+  }
+}
+
+/* Yin Yang construction and animation */
 
 .nav-link:hover .yin-yang {
   -ms-transform: rotate(360deg); /* IE 9 */
@@ -72,9 +81,21 @@ hero .yin-yang:after {
   transform: rotate(360deg);
 }
 
-hero .yin-yang:hover,
-hero .yin-yang:hover:before,
-hero .yin-yang:hover:after {
+ .yin-yang,
+ .yin-yang:before,
+ .yin-yang:after {
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Safari and Chrome */
+  -o-transform: rotate(0deg); /* Opera */
+  -moz-transform: rotate(0deg); /* Firefox */
+  transform: rotate(0deg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+ .yin-yang:hover,
+ .yin-yang:hover:before,
+ .yin-yang:hover:after {
   -ms-transform: rotate(360deg); /* IE 9 */
   -webkit-transform: rotate(360deg); /* Safari and Chrome */
   -o-transform: rotate(360deg); /* Opera */
@@ -82,8 +103,7 @@ hero .yin-yang:hover:after {
   transform: rotate(360deg);
 }
 
-/* line 83, scss/main.scss */
-hero .yin-yang {
+ .yin-yang {
   box-sizing: content-box;
   width: 24px;
   height: 12px;
@@ -93,21 +113,11 @@ hero .yin-yang {
   border-width: 0.5px 0.5px 12.5px 0.5px;
   border-radius: 100%;
   position: absolute;
-  left: 0;
-  top: 20px;
+  left: -25px;
+  top: 10px;
 }
 
-/*@-webkit-keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(180deg);
-  }
-}*/
-
-/* line 109, scss/main.scss */
-hero .yin-yang:before {
+ .yin-yang:before {
   box-sizing: content-box;
   content: "";
   position: absolute;
@@ -120,8 +130,8 @@ hero .yin-yang:before {
   height: 3px;
 }
 
-/* line 125, scss/main.scss */
-hero .yin-yang:after {
+
+ .yin-yang:after {
   box-sizing: content-box;
   content: "";
   position: absolute;
@@ -134,7 +144,7 @@ hero .yin-yang:after {
   height: 3px;
 }
 
-/* line 148, scss/main.scss */
+
 .info,
 .contact-form {
   background-color: rgba(0, 0, 0, 0.6);
@@ -150,9 +160,12 @@ hero .yin-yang:after {
   font-family: "Eagle Lake", cursive;
 }
 
-/* line 164, scss/main.scss */
 .contact-form input {
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-outline-white:hover {
+  color: #000;
 }
 
 /* line 167, scss/main.scss */
@@ -175,7 +188,7 @@ hero .yin-yang:after {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-/* line 184, scss/main.scss */
+/* footer */
 footer .flexDiv .yt,
 footer .flexDiv .tw,
 footer .flexDiv .fb {
@@ -186,7 +199,6 @@ footer .flexDiv .fb {
   background-position: center;
 }
 
-/* line 192, scss/main.scss */
 footer {
   padding: 3vh;
   border-radius: 1rem 1rem 0 0;
@@ -195,8 +207,6 @@ footer {
   font-family: "Eagle Lake", cursive;
   text-align: center;
 }
-
-/* line 199, scss/main.scss */
 footer h3 {
   margin: 0 auto;
   text-align: center;
