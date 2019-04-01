@@ -66,6 +66,9 @@ body {
 }
 }
 
+h1{
+  font-family: "Eagle Lake", cursive;
+}
 
 @media(max-width: 768px){
   h1{
