@@ -1,3 +1,6 @@
+$( document ).ready(function() {
+  console.log( "Dom fully loaded" );
+
 //scroll to linked section
 
 $(function() {
@@ -44,4 +47,8 @@ $(".nav-link").click(function(){
 
 AOS.init({
   duration: 1200,
-})
+});
+
+window.addEventListener('load', AOS.refresh);
+
+});
