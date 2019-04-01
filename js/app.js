@@ -29,7 +29,7 @@ window.onscroll = function() {
     document.getElementById("navbar").style.top = "0";
   } 
   else {
-    document.getElementById("navbar").style.top = "-300px";
+    document.getElementById("navbar").style.top = "-100px";
   }
 
   prevScrollpos = currentScrollpos;
@@ -41,3 +41,7 @@ $(".nav-link").click(function(){
   $(".navbar-toggler").addClass("collapsed")
   $(".navbar-collapse").removeClass("show");
 });
+
+AOS.init({
+  duration: 1200,
+})
